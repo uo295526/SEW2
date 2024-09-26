@@ -47,8 +47,9 @@
     <p>Equipo: Aston Martin Racing</p>
     <p>Nacionalidad: Española</p>
     <picture> <!--Esto es para poner varios formatos de la foto segun el dispositivo utilizado-->
-        <source src="multimedia/imagenes/fotoPersonalMovil.jpg" media="(max-width: 465px)"> <!--caso dispositivo movil-->
-        <source src="multimedia/imagenes/fotoPersonalTablet.jpg" media="(max-width: 799px)"> <!--caso dispositivo movil-->
+        <source media="(max-width: 465px)" srcset="multimedia/imagenes/fotoPersonalMovil.jpg"> <!--caso dispositivo movil-->
+        <source media="(max-width: 799px)" srcset="multimedia/imagenes/fotoPersonalTablet.jpg"> <!--caso dispositivo movil-->
+        <source media="(min-width: 800px)" srcset="multimedia/imagenes/fotoPersonal.jpg">
         <img src="multimedia/imagenes/fotoPersonal.jpg" alt="personal"> <!--esto seria el caso normal-->
     </picture>
     
@@ -107,12 +108,12 @@
         <caption>Resultados obtenidos en la última temporada</caption>
         <thead>
             <tr> <!--tr row-->
-                <th>Competicion</th> <!--th ENCABEZADOS como elemento de la fila-->
-                <th>Puntos obtenidos</th>
-                <th>Posición</th>
-                <th>Poles</th>
-                <th>Victorias</th>
-                <th>Podios</th>
+                <th id="1" scope="col">Competicion</th> <!--th ENCABEZADOS como elemento de la fila-->
+                <th id="2" scope="col">Puntos obtenidos</th>
+                <th id="3" scope="col">Posición</th>
+                <th id="4" scope="col">Poles</th>
+                <th id="5" scope="col">Victorias</th>
+                <th id="6" scope="col">Podios</th>
             </tr>
         </thead>
         <tbody>
@@ -152,6 +153,11 @@
     </p>
     <figure><img alt="melendi" src="multimedia/imagenes/melendi.jpg"></figure>
     <audio src="multimedia/audios/fernandu.m4a" controls></audio> <!--Este controls es el que anade el reproductor del audio, pues autoplay es mejor evitarlo-->
-    <video src="multimedia/videos/pruebaVideo.mp4" controls preload="">Prueba</video>
+    
+    <video src="multimedia/videos/pruebaVideo.mp4" controls preload="prueba">Prueba</video>
+    <video controls preload="prueba">
+        <source src="multimedia/videos/pruebaVideo.mp4" type="video.mp4"/>
+        <source src="multimedia/videos/pruebaVideo.webm" type="video.webm"/>
+    </video>
 </body>
 </html>
