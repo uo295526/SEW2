@@ -1,0 +1,16 @@
+/*Especificidad: 001*/
+/*
+body {
+    font-family: Tahoma, sans-serif;
+    color: #818181;
+    background-color: #280d9e;
+    }
+  Especificidad: 001
+  h1 {  <!--esto es un selector  Selector Specifity: (0,0,1)-->
+    color: #1485a1;    
+    background-color:#FF5733; 
+    text-transform: uppercase;
+    padding: 2em; 
+    text-align: center;     
+    }
+  */
