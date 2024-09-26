@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+
+<!--W3C para validar despues cada ej. Luego ya github-->
+
+<html lang="es">
+<head>
+     <!-- Datos que describen el documento -->
+     <meta charset="UTF-8" />
+     <title>SEW.P1</title>
+     <meta name ="author" content="UO295526">
+     <meta name ="description" content ="Pagina piloto" />
+     <meta name ="keywords" content ="HTML, CSS, JavaScript" />
+     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ 
+     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+
+     <!--Para poner las celdas en la tabla aqui. 
+     border: Anadimos bordes de tamano de un pixel, color negro
+     border-collapse: Juntamos los borders para que no haya espacio entre ellos-->
+     <style>table, th, td{
+        border: 1px solid black; 
+        border-collapse: collapse;
+        }
+     </style>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <h1>F1Desktop</h1>
+    <nav>
+        <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+        <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a>
+        <a href="noticias.html" title="enlace a la pagina ">Noticias</a>
+        <a href="calendario.html" title="enlace a la pagina ">Calendario</a>
+        <a href="meteorologia.html" title="enlace a la pagina ">Meteorologia</a>
+        <a href="circuito.html" title="enlace a la pagina ">Circuito</a>
+        <a href="viajes.html" title="enlace a la pagina ">Viajes</a>
+        <a href="juegos.html" title="enlace a la pagina ">Juegos</a>
+    </nav>
+    <!--este h1 y nav, al ser comun de todas las paginas, lo movemos-->
+
+    <h2>Fernando Alonso</h2>
+    <h3>Datos personales</h3>
+    <p>Nombre: Fernando Alonso Díaz. Equipo: Aston Martin Racing</p>
+    <p>Equipo: Aston Martin Racing</p>
+    <p>Nacionalidad: Española</p>
+    <figure>
+        <picture> <!--Esto es para poner varios formatos de la foto segun el dispositivo utilizado-->
+            <source srcset="multimedia/imagenes/fotoPersonalMovil" media="(max-width: 465px)"> <!--caso dispositivo movil-->
+            <source srcset="multimedia/imagenes/fotoPersonalTablet" media="(max-width: 799px)"> <!--caso dispositivo movil-->
+            <img alt="personal" src="multimedia/imagenes/fotoPersonal.jpg"> <!--esto seria el caso normal-->
+        </picture>
+    </figure>
+    
+    <h3>Presentación</h3>
+    <p>Pues aqui va la presentacion es un chico muy majo ........</p>
+    <h4>Aficiones</h4>
+      <ul>
+        <li>Waterpolo</li>
+        <li>El aceite y el motor</li>
+        <li>Amar</li>
+        <li>Querer</li>
+        <li>Disfrutar</li>
+      </ul>
+    
+      <h4>Equipos</h4>
+    <ol>
+        <li>Aston Martin Racing</li>
+        <li>Ferrari</li>
+        <li>El Raimon</li>
+        <li>Royal Academy</li>
+        <li>Honda</li>
+    </ol>
+    
+    <h4>Estadísticas F1</h4>
+    <dl>
+        <dt>Pit stop</dt>
+            <dd>Cuatro</dd>
+        <dt>Pole</dt>
+            <dd>Cinco</dd>
+        <dt>Rake</dt>
+            <dd>Seis</dd>
+        <dt>Efecto suelo</dt>
+            <dd>Pues siete si</dd>
+    </dl>
+    
+    <h4>Resultados recientes</h4>
+        <ul>
+            <li>
+                <p>En la F1</p> <!--Como contexto a la lista. Dentro del li para que no cuente como otro elemento aparte-->
+                <ol>    <!--LISTA ANIDADA. La lista interna debe estar envuelta por un li-->
+                    <li>Gano eso</li>
+                    <li>Y eso tambien</li>
+                    <li>Que bueno que es no?</li>
+                </ol>
+            </li>
+            <li>
+                <p>Externo a la F1</p>
+                <ul>
+                    <li>Si si que lo gano</li>
+                    <li>Con triciclos tambien es bueno</li>
+                    <li>Vaya maquinote</li>
+                </ul>
+            </li>
+        </ul>
+    <table>
+        <caption>Resultados obtenidos en la última temporada</caption>
+        <thead>
+            <tr> <!--tr row-->
+                <th>Competicion</th> <!--th ENCABEZADOS como elemento de la fila-->
+                <th>Puntos obtenidos</th>
+                <th>Posición</th>
+                <th>Poles</th>
+                <th>Victorias</th>
+                <th>Podios</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pensilvania</td>  <!--td ELEMENTO NORMAL como elemento de la fila-->
+                <td>40 puntos</td>
+                <td>Segundo puesto</td>
+                <td>Tres</td>
+                <td>Cuatro</td>
+                <td>Tres</td>
+            </tr>
+            <!--
+            <tr> En caso de querer poner mas filas
+                <td>Yugoslavia</td>
+                <td>Decimo tercero (creo)</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+            </tr>
+            <tr>
+                <td>Otro</td>
+                <td>Y otro otrito</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+                <td>Segundo puesto</td>
+            </tr>
+            -->
+        </tbody>
+    </table>
+    <h5>Enlaces externos</h5>
+    <p>Para consultar información adicional sobre Fernando Alonso prueba con su
+        <a href="https://www.fernandoalonso.com/">Página oficial</a>
+        y sus
+        <a href="https://www.youtube.com/watch?v=dzCuwjHFd7M">Redes</a>
+    </p>
+    <figure><img alt="melendi" src="multimedia/imagenes/melendi.jpg"></figure>
+    <audio src="multimedia/audios/fernandu.m4a" controls></audio> <!--Este controls es el que anade el reproductor del audio, pues autoplay es mejor evitarlo-->
+    <video src="multimedia/videos/pruebaVideo.mp4" controls preload="">Prueba</video>
+</body>
+</html>
