@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+
+<!--mirar de meter atributos (con unidades, como metros)-->
+<circuitos>
+
+<circuito>
+<nombre>Zandvoort</nombre>
+<longitud>4'259 km</longitud>
+<anchura>X km</anchura>
+<fechaInicio>23 de agosto</fechaInicio>
+<horaInicio>12:00 am</horaInicio>
+<numeroVueltas>72</numeroVueltas>
+<localidad>Holanda Septentrional</localidad>
+<pais>Paises Bajos</pais>
+<referencias>
+    <referencia>
+        <enlace>https://www.dazn.com/es-ES/news/motor/circuito-zandvoort-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-paises-bajos-mundial-f1/z4tfep6uuudo1fqpzfnrzconu</enlace>
+    </referencia>
+    <referencia>
+        <enlace>https://www.statsf1.com/es/circuit-zandvoort.aspx</enlace>
+    </referencia>
+    <referencia>
+        <enlace>https://www.redbull.com/pe-es/f1-circuito-zandvoort-lo-que-debes-saber</enlace>
+    </referencia>
+</referencias>
+<fotografias>
+    <fotografia>
+        <enlace>fotoCircuito.PNG</enlace>
+    </fotografia>
+</fotografias>
+<coordenadas>
+    <longitud>52.388292</longitud>
+    <latitud>4.543011</latitud>
+    <altitud>0,3048 (revisar estos tres)</altitud>
+</coordenadas>
+<puntosTramos>
+    <tramoActual>
+        <distancia>a</distancia>
+        <puntoFinal>b</puntoFinal>
+        <numSector>c</numSector>
+    </tramoActual>
+    <tramoActual>
+        <distancia>d</distancia>
+        <puntoFinal>e</puntoFinal>
+        <numSector>f</numSector>
+    </tramoActual>
+</puntosTramos>
+
+
+</circuito>
+
+</circuitos>

@@ -1,16 +1,139 @@
-/*Especificidad: 001*/
-/*
+/* Colores a usar: B1D8B7, 94C973, 76B947, 2F5233/1E3320(mejor este por contraste)
+ especificidad 001 -> a cuantos elem afecta. nav a seria 002 por ejemplo
+*/
+/*Especificidad: 001*/  
 body {
-    font-family: Tahoma, sans-serif;
-    color: #818181;
-    background-color: #280d9e;
+    background-color: #B1D8B7;
+    color: #000000; /*color elementos primer plano (texto)*/
+    font-family: Arial,Tahoma; /*sin espacio entre ellas*/
     }
-  Especificidad: 001
-  h1 {  <!--esto es un selector  Selector Specifity: (0,0,1)-->
-    color: #1485a1;    
-    background-color:#FF5733; 
-    text-transform: uppercase;
-    padding: 2em; 
-    text-align: center;     
-    }
-  */
+/*Especificidad: 012*/
+body > p:first-of-type{  /*SELECTOR ESPECIFICO: cambia el primero de tipo p del body (EN ESTE CASO, LAS MIGAS)*/
+  
+  font-size: smaller;
+}
+
+/*Especificidad: 001*/
+header {
+  background-color: #76b947;  /*ADVERTENCIA: Color fondo establecido pero no de primer plano*/
+  }
+
+/*Especificidad: 001*/
+h1 {
+  /*Especificidad: 001*/ 
+  color: #1E3320;
+   /*aqui seguramente salga warning, poner que el backgroundcolor hereda de ...*/
+  }
+@media (max-width: 465px){  /*caso Moviles*/
+  /*Especificidad: 001*/
+  h1{
+    color: #1E3320;  /*ADVERTENCIA: Se redefine color*/
+    font-size: smaller;
+  }
+  /*Especificidad: 012*/
+  body > p:first-of-type{  /*SELECTOR ESPECIFICO: cambia el primero de tipo p del body (EN ESTE CASO, LAS MIGAS)*/
+    display: none; /*esto para que este p (las migas) no salga en moviles*/
+  }
+}
+
+@media (max-width: 799px){  /*caso Tablets*/
+  /*Especificidad: 001*/
+  h1{
+    color: #1E3320; /*ADVERTENCIA: Se redefine color*/
+    font-size: smaller; /*ADVERTENCIA:Se redefine font-size*/
+  }
+}
+
+@media (min-width: 800px){
+  /*Especificidad: 001*/
+  h1{
+    color: #1E3320; /*ADVERTENCIA: Se redefine color*/ /*ADVERTENCIA: No color de fondo*/
+
+  }
+}
+
+/*Especificidad: 001*/
+nav {
+  color: #1E3320; /*ADVERTENCIA:Hay color primer plano pero no fondo*/
+  }
+
+/*Especificidad: 003*/ /*Para mirar eso, selectionar el Selector y poner encima el raton*/
+header h1 a{
+  text-decoration: none;  /*le quito el subrayado a F1DESKTOP*/
+  color:#000000;  /*esto lo ponemos asi pues al ser enlace hereda el color morado*/ /*ADVERTENCIA:Hay color primer plano pero no de fondo*/
+}
+/*Especificidad: 003*/ 
+header nav a{  /*asi, a todos los a del nav en header les quito la decoracion*/
+  text-decoration: none;
+}
+/*Especificidad: 012*/ 
+main a:link{ /*asi trato los enlaces externos,  pues son los que estn en el main. Pseudoclase->:link = Aun no visitado*/
+  color :rgb(55, 112, 165); /*ADVERTENCIA:Hay color primer plano pero no fondo*/
+}
+/*Especificidad: 012*/ 
+main a:visited{ /*Pseudoclase->:visited = Una vez el enlace ya ha sido pinchado con anterioridad*/
+  color :rgb(71, 6, 146); /*ADVERTENCIA:Hay color primer plano pero no fondo*/
+}
+/*Especificidad: 012*/ 
+main a:hover{ /*Pseudoclase->:hover = Cuando el cursor este encima suya*/
+  color :red; /*ADVERTENCIA:Hay color primer plano pero no fondo*/
+}
+/*Especificidad: 002*/ 
+ul li{  /*Modificamos los elementos de lista ul NO ordenada*/
+  list-style-type: square;  /*uso cuadrados como indicador de cada elemento*/
+}
+/*Especificidad: 002*/ 
+ol li{  /*Modificamos los elementos de lista ol ordenada*/
+  list-style-type: upper-roman;  /*en vez de numeros decimales, empleo romanos en Mayusc*/
+}
+/*Especificidad: 003*/ 
+ul ol li{  /*De la lista UL, modificamos los elementos de listas OL anidadas en la primera*/
+  font-size: smaller;
+}
+/*Especificidad: 003*/ 
+ul ul li{  /*De la lista UL, modificamos los elementos de otras listas UL anidadas en la primera*/
+  font-size: smaller;
+}
+/*Especificidad: 001*/ 
+dt{ /*el termino (no la definicion)*/
+  text-decoration: underline;
+  padding-top: 2px; /*dejen espacio por arriba, asi espacio cada par de termino/definicion*/
+}
+/*Especificidad: 001*/ 
+table {
+  width: 100%; /*pues esto beneficia la adaptabilidad*/
+  margin: 25px; /*padding superior e inferior*/ 
+  border-collapse: collapse;
+}
+/*Especificidad: 001*/ 
+th{
+  border: 1px solid black; /*para que queden celdas. Poner aqui y en TD*/
+  background-color: #107910; /*color de la celda*/ /*ADVERTENCIA:Hay color FONDO pero no primer plano*/
+}
+/*Especificidad: 001*/ 
+td{
+  border: 1px solid black; 
+  background-color: #c3d3c3; /*ADVERTENCIA:Hay color FONDO pero no primer plano*/
+  text-align: center;
+}
+/*Especificidad: 001*/ 
+img{
+  width:100%;
+  height:auto;
+  display: block; /*lo muestra en un bloque*/
+  margin-left: auto;
+  margin-right: auto; /* Centra horizontalmente */
+}
+/*Especificidad: 001*/ 
+video{
+  width:100%;
+  height:auto;
+}
+
+
+
+/*(mirar tema control warnings de esto)si salen advertencia aqui se pone algo como: Hereda de ...*/
+
+/*
+p{padding: 6em 2em 2em} arriba derecha abajo izq creo
+*/

@@ -1,0 +1,15 @@
+
+header{
+    display: flex; /* Flexbox, ayuda a la adaptabilidad */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;  /* Centra verticalmente los elementos */
+    padding: 20px; /* Espaciado interno */
+    background-color: #76b947;
+}
+
+nav a.active{ /*asi modificamos el a activo del nav*/
+    color: #000000;
+    font-weight: bold;  
+    border-bottom: 2px solid #000000; /* Línea inferior */
+    border-top: 2px solid #000000; /* línea superior */
+}
